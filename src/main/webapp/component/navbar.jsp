@@ -3,9 +3,9 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-success">
 	<div class="container-fluid">
-		<a class="navbar-brand" href="index.jsp"><h2>
+		<a class="navbar-brand" href="index.jsp">
 				<i class="fa-regular fa-hospital"></i> CITY HOSPITAL
-			</h2></a>
+		</a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 			data-bs-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -22,7 +22,7 @@
 				<li class="nav-item"><a class="nav-link active"
 					aria-current="page" href="doctor_login.jsp">Doctor</a></li>
 				<li class="nav-item"><a class="nav-link active"
-					aria-current="page" href="#">Appointment</a></li>
+					aria-current="page" href="user_appointment.jsp">Appointment</a></li>
 				<li class="nav-item"><a class="nav-link active"
 					aria-current="page" href="user_login.jsp">User</a></li>
 
@@ -30,9 +30,9 @@
 			
 				<c:if test="${not empty userObj}">
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="#">Appointment</a></li>
+						aria-current="page" href="user_appointment.jsp">Appointment</a></li>
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="#">View Appointment</a></li>
+						aria-current="page" href="view_appointment.jsp">View Appointment</a></li>
 
 					<div class="dropdown">
 						<button class="btn btn-success dropdown-toggle" type="button"

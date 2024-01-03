@@ -125,4 +125,30 @@ public class DoctorDao {
 		return doc;
 	}
 
+	public Doctor login(String email,String password) {
+		Doctor doc = null;
+		try {
+			String query = "select * from doctorinfo where email=? and password=?";
+			PreparedStatement ps = conn.prepareStatement(query);
+			ps.setString(1, email);
+			ps.setString(2, password);
+			
+			ResultSet rs = ps.executeQuery();
+			while(rs.next())
+			{
+				doc= new Doctor();
+				doc.setId(rs.getInt(1));
+				doc.setName(rs.getString(2));
+				doc.setDob(rs.getString(3));
+				doc.setQualification(rs.getString(4));
+				doc.setEmail(rs.getString(5));
+				doc.setContact(rs.getString(6));
+				doc.setPassword(rs.getString(7));
+				doc.setSpecialization(rs.getString(8));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return doc;
+	}
 }
